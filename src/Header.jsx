@@ -6,7 +6,6 @@ const Header = () => {
     alert('About: Coming Soon!')
   }
 
-
   const contactPlaceholder = () => {
     alert('Contact: Coming Soon!')
   }
