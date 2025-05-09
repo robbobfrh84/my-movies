@@ -94,3 +94,10 @@ Using the API from the docs went well. I'd like to try and expand this to oraniz
 
 Shout out to Cohort TWO! Harmonic Hustlers!
 
+### Resources
+- TMDB: 
+  - Getting Started: https://developer.themoviedb.org/docs/getting-started
+  - Structering image urls: https://developer.themoviedb.org/docs/image-basics
+  - Testing with access key: https://developer.themoviedb.org/reference/search-movie
+
+
