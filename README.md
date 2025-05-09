@@ -1,4 +1,9 @@
-# React + Vite
+# Developer Setup
+- `npm install`
+- `npm run dev`
+
+
+# Boiler plate code started with "React + Vite"
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
