@@ -75,7 +75,7 @@ Deployed Application (**required**): [Flixster Deployed Site](https://my-movies-
 ### Walkthrough Video
 
 Walkthrough Video:
-- Link: 
+- Link: https://www.loom.com/share/a3c2804ce97a49c0ab0cab7ec47f9805
 
 ### Reflection
 

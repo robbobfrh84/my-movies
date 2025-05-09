@@ -65,8 +65,6 @@ const App = () => {
     setMovies(sortMovies); 
   }
 
- 
-
   const LoadMore = () => {
     setSortedBy("none");
     setPage(page + 1);
