@@ -1,4 +1,4 @@
-.search-form {
+.search-container {
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -19,7 +19,7 @@
   border-color: #3498db;
 }
 
-.search-button {
+.search-button, .clear-button {
   padding: 10px 15px;
   background-color: #3498db;
   color: white;
@@ -28,6 +28,10 @@
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.clear-button {
+  background-color: rgba(0,0,0,0.1);
 }
 
 .search-button:hover {

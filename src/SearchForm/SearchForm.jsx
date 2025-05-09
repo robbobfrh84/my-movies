@@ -1,24 +1,60 @@
-// 🔥 ONLY COPY PASTED FROM LAB 3 Needs Var review
-
-import React from 'react'
+import React, { useState } from 'react'
 import './SearchForm.css'
 
-function SearchForm({ onCityChange }) {
+function SearchForm({ updateSearchTerm }) {
+  const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const formData = new FormData(event.target)
-    // const cityName = formData.get('city')
-    onCityChange(cityName)
-    event.target.reset();
+    event.preventDefault();
+    updateSearchTerm(inputValue);
+  };
+
+  const handleChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const clearInput = () => {
+    setInputValue('');
+    updateSearchTerm("none");
   };
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
-      <input className="search-input" type="text" name="city" placeholder="Enter city name" />
+    <form className="search-container" onSubmit={handleSubmit}>
+      <input
+        id="search_input"
+        className="search-input"
+        type="text"
+        name="search"
+        placeholder="Enter search term"
+        value={inputValue}
+        onChange={handleChange}
+      />
       <button className="search-button" type="submit">Search</button>
+      <button className="clear-button" type="button" onClick={clearInput}>Clear</button>
     </form>
   );
 }
 
-export default SearchForm
+export default SearchForm;
+
+// import React from 'react'
+// import './SearchForm.css'
+
+// function SearchForm({ setSearchTerm }) {
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault()
+//     console.log('event.target:',event.target)
+//     // setSearchTerm(event.target.value)
+//   };
+
+//   return (
+//     <div className="search-container">
+//       <input id="search_input" className="search-input" type="text" name="search" placeholder="Enter search term" />
+//       <button className="search-button" onClick={handleSubmit}>Search</button>
+//       <button className="clear-button" >Clear</button>
+//     </div>
+//   );
+// }
+
+// export default SearchForm

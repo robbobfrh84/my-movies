@@ -2,6 +2,7 @@ import { React, useState } from 'react'
 import './MovieCard.css'
 import Details from './../Details/Details.jsx'
 import starIcon from '../assets/star2.png'
+import poster from '../assets/no_poster_image.png'
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3/movie';
@@ -22,14 +23,18 @@ function MovieCard({ movie }) {
   };
 
   let size = 'lg';
-  if (movie.title.length > 14) { size = 'md' };
-  if (movie.title.length > 20) { size = 'sm' };
+  if (movie.title.split("").length > 13) { size = 'md' };
+  if (movie.title.length > 18) { size = 'sm' };
+  if (movie.title.length > 30) { size = 'esm' };
+
+
+  const movieImage = movie.poster_path ? "https://image.tmdb.org/t/p/w500"+movie.poster_path : poster
 
   return (
-    <div onClick={fetchMovieDetails}>
+    <section onClick={fetchMovieDetails}>
       <img 
         className="poster" 
-        src={ "https://image.tmdb.org/t/p/w500" + movie.poster_path } 
+        src={ movieImage } 
         alt={ movie.title + " poster." } 
       />
       <div className="info-block">
@@ -37,7 +42,7 @@ function MovieCard({ movie }) {
         <div className="divider-line"></div>
         <p className="rating">
           <img src={starIcon} alt="Star icon" className="star-icon" />
-          Rating: {Number(movie.vote_average).toFixed(1)}
+          Vote Average: {Number(movie.vote_average).toFixed(1)}
         </p>
       </div>
 
@@ -48,7 +53,7 @@ function MovieCard({ movie }) {
         />
       )}
 
-    </div>
+    </section>
   )
 }
 

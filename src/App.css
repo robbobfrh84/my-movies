@@ -6,7 +6,7 @@
   min-height: 100vh;
 }
 
-header {
+.top-container {
   background-color: #282c34;
   margin-top: 0px;
   color: white;
@@ -18,10 +18,22 @@ header {
 
 h1 {
   padding: 20px;
+  padding-bottom: 10px;
   margin: 0px;
   font-size: 40px;
   letter-spacing: 5px;
 }
+
+.nav-container {
+  padding-bottom: 20px;
+}
+
+.nav-container span {
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
 
 .TopNavBar {
   display: flex;

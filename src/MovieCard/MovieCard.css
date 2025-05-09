@@ -32,12 +32,17 @@
 
 .title.md {
   top: 6px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .title.sm {
   top: 1px;
   font-size: 14px;
+}
+
+.title.esm {
+  top: 0px;
+  font-size: 11px;
 }
 
 .divider-line {

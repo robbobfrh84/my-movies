@@ -19,13 +19,13 @@ function MovieList({ movies }) {
   };
 
   return (
-    <div className="movie-container"> 
+    <section className="movie-container"> 
       { movies.map( movie => (
         <div className="movie-card" key={movie.id}>
           <MovieCard movie={movie} />
         </div>
       ))}
-    </div>
+    </section>
   );
 }
 
