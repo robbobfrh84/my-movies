@@ -20,9 +20,7 @@ const App = () => {
   const limit = 10;
 
   const fetchData = async (sortedBy) => {
-    console.log('fetch:')
     try {
-      // const url = `${BASE_URL}/movie/now_playing?api_key=${API_KEY}&page=${page}&language=en-US&limit=${limit}`;
       let url;
       if (searchTerm) {
         url = `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(searchTerm)}&page=${page}&language=en-US&limit=${limit}`;
@@ -35,7 +33,6 @@ const App = () => {
       }
       const data = await response.json();
       const allMovies = [...movies, ...data.results];   
-      console.log('allMovies:',allMovies)
       if (allMovies.length == movies.length) {
         alert("You have recieved all movies for this search result.")
       };
