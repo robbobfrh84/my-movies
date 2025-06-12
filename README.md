@@ -4,7 +4,7 @@
 - `npm install`
 - `npm run dev`
 
-## Unit Assignment: Flixster.  ---
+## Unit Assignment: Flixster.  --- | ----
 
 Submitted by: Bob Main
 
